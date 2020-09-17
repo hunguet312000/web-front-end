@@ -51,17 +51,19 @@ body {
     background-color: #f1f1f2;
 }
 
+.navbar-custom {
+    min-height: 80px;
+}
+
+.container {
+    padding: 20px;
+}
+
 .navbar-custom .navbar-search {
     position: absolute;
     margin-left: 120px;
     margin-top: 8px;
     width: 750px;
-}
-
-@media (min-width: 1200px) {
-    .navbar-custom .navbar-search {
-        max-width: 750px;
-    }
 }
 
 @media (max-width: 767px) {
