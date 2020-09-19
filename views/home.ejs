@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Thuê Trọ</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="/css/home.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <nav class="navbar navbar-light navbar-fixed-top navbar-custom" role="navigation" style="background-color: #ffffff;">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-nav"> <span class="sr-only"></span>
-            </button>
-                <b><a class="navbar-brand " href="home"><span class="hidden-xs" style="font-size: x-large">Thuê Trọ</span></a></b>
-                <form class="navbar-search">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input class="form-control" name="search" placeholder="Search" autocomplete="off" autofocus="autofocus" type="text">
-                            <span class="input-group-btn"> 
-                                 <button class="btn btn-default" type="button">
-                                    <i class="glyphicon glyphicon glyphicon-search"></i>
-                                     Tìm kiếm
-                                </button>
-                                </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user" style="color: #8e93b9;"></span> 
-                                <span style="color:#8e93b9;">Đăng nhập</span>
-                                </a></li>
-                    <li>
-                        <a href="#">
-                            <li><a href="#"><span class="glyphicon glyphicon glyphicon-bell" style="color:#8e93b9;"></span> 
-                                    <span style="color: #8e93b9">Thông báo</span>
-                                    </a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+<%- include("partials/header"); -%>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -149,8 +100,8 @@
         </div>
         <div class="more">
             <button class="btn btn-default" type="button">
-                 Xem thêm
-            </button>
+ Xem thêm
+</button>
         </div>
     </div>
 
@@ -198,42 +149,9 @@
         </div>
         <div class="more">
             <button class="btn btn-default" type="button">
-                 Xem thêm
-            </button>
+ Xem thêm
+</button>
         </div>
     </div>
 
-    </div>
-    </div><br>
-
-    <footer class="container-fluid text-center">
-        <p>Footer Text</p>
-    </footer>
-
-    <script>
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
-</body>
-
-</html>
+    <%- include("partials/footer"); -%>

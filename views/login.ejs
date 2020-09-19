@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Đăng nhập</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="/css/login.css" rel="stylesheet">
+    <script>
+        function toggleResetPswd(e) {
+            e.preventDefault();
+            $('#logreg-forms .form-signin').toggle() // display:block or none
+            $('#logreg-forms .form-reset').toggle() // display:block or none
+        }
+
+        function toggleSignUp(e) {
+            e.preventDefault();
+            $('#logreg-forms .form-signin').toggle(); // display:block or none
+            $('#logreg-forms .form-signup').toggle(); // display:block or none
+        }
+
+        $(() => {
+            // Login Register Form
+            $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
+            $('#logreg-forms #cancel_reset').click(toggleResetPswd);
+            $('#logreg-forms #btn-signup').click(toggleSignUp);
+            $('#logreg-forms #cancel_signup').click(toggleSignUp);
+        })
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-fixed-top navbar-custom" role="navigation" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="navbar-header">
+                <b><a class="navbar-brand " href="home"><span class="hidden-xs" style="font-size: xx-large">Thuê Trọ</span></a></b>
+                <b><span class="blink" style="font-size: x-large">Đăng nhập</span></b>
+    </nav>
+    <div id="logreg-forms">
+        <form class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Đăng nhập</h1>
+            <div class="social-login">
+                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Đăng nhập với Facebook</span> </button>
+                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Đăng nhập với Google+</span> </button>
+            </div>
+            <p style="text-align:center"> Hoặc </p>
+            <div class="input-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Tài khoản email" required="" autofocus="">
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Mật khẩu" required="">
+            </div>
+
+            <div class="input-group">
+                <button class="btn btn-md btn-rounded btn-block form-control submit" type="submit"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
+            </div>
+
+            <a href="#" id="forgot_pswd">Quên mặt khẩu?</a>
+            <hr>
+            <!-- <p>Don't have an account!</p>  -->
+            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Đăng ký tài khoản mới</button>
+        </form>
+
+        <form action="#" class="form-reset">
+            <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <button class="btn btn-primary btn-block" type="submit">Lấy lại mật khẩu</button>
+            <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Trở lại</a>
+        </form>
+
+        <form action="#" class="form-signup">
+            <div class="social-login">
+                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Đăng ký với Facebook</span> </button>
+            </div>
+            <div class="social-login">
+                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Đăng ký với Google+</span> </button>
+            </div>
+
+            <p style="text-align:center">Hoặc</p>
+
+            <input type="text" id="user-name" class="form-control" placeholder="Họ và tên" required="" autofocus="">
+            <input type="email" id="user-email" class="form-control" placeholder="Địa chỉ email" required autofocus="">
+            <input type="password" id="user-pass" class="form-control" placeholder="Mật khẩu" required autofocus="">
+            <input type="password" id="user-repeatpass" class="form-control" placeholder="Nhập lại mật khẩu" required autofocus="">
+
+            <div class="input-group">
+                <button class="btn btn-md btn-block submit" type="submit"><i class="fas fa-user-plus"></i> Đăng ký</button>
+            </div>
+
+            <a href="#" id="cancel_signup"><i class="fa fa-angle-left"></i> Trở lại</a>
+        </form>
+        <br>
+
+    </div>
+
+    <%- include("partials/footer"); -%>
